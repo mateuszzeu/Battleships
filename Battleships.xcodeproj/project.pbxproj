@@ -45,6 +45,11 @@
 			path = BattleshipsUITests;
 			sourceTree = "<group>";
 		};
+		4976C3E62ED8BA320039228F /* src */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = src;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +80,7 @@
 		4976C3B22ED8B8600039228F = {
 			isa = PBXGroup;
 			children = (
+				4976C3E62ED8BA320039228F /* src */,
 				4976C3BD2ED8B8600039228F /* Battleships */,
 				4976C3CB2ED8B8620039228F /* BattleshipsTests */,
 				4976C3D52ED8B8620039228F /* BattleshipsUITests */,
@@ -109,6 +115,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				4976C3BD2ED8B8600039228F /* Battleships */,
+				4976C3E62ED8BA320039228F /* src */,
 			);
 			name = Battleships;
 			packageProductDependencies = (
@@ -414,7 +421,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -446,7 +453,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
