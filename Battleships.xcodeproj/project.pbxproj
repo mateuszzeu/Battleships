@@ -27,6 +27,11 @@
 		4976C3BB2ED8B8600039228F /* Battleships.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Battleships.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4976C3C82ED8B8620039228F /* BattleshipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BattleshipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4976C3D22ED8B8620039228F /* BattleshipsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BattleshipsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4976C40A2ED9EC4E0039228F /* ships-game-20251128-153921.log */ = {isa = PBXFileReference; lastKnownFileType = text; path = "ships-game-20251128-153921.log"; sourceTree = "<group>"; };
+		4976C40B2ED9EC4E0039228F /* ships-game-20251128-153935.log */ = {isa = PBXFileReference; lastKnownFileType = text; path = "ships-game-20251128-153935.log"; sourceTree = "<group>"; };
+		4976C40C2ED9EC4E0039228F /* ships-game-20251128-153939.log */ = {isa = PBXFileReference; lastKnownFileType = text; path = "ships-game-20251128-153939.log"; sourceTree = "<group>"; };
+		4976C40D2ED9EC4E0039228F /* ships-game-20251128-153950.log */ = {isa = PBXFileReference; lastKnownFileType = text; path = "ships-game-20251128-153950.log"; sourceTree = "<group>"; };
+		4976C40E2ED9EC4E0039228F /* ships-game-20251128-153953.log */ = {isa = PBXFileReference; lastKnownFileType = text; path = "ships-game-20251128-153953.log"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -79,6 +84,11 @@
 				4976C3BD2ED8B8600039228F /* Battleships */,
 				4976C3CB2ED8B8620039228F /* Tests */,
 				4976C3BC2ED8B8600039228F /* Products */,
+				4976C40A2ED9EC4E0039228F /* ships-game-20251128-153921.log */,
+				4976C40B2ED9EC4E0039228F /* ships-game-20251128-153935.log */,
+				4976C40C2ED9EC4E0039228F /* ships-game-20251128-153939.log */,
+				4976C40D2ED9EC4E0039228F /* ships-game-20251128-153950.log */,
+				4976C40E2ED9EC4E0039228F /* ships-game-20251128-153953.log */,
 			);
 			sourceTree = "<group>";
 		};
