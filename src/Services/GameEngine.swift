@@ -14,7 +14,7 @@ struct GameEngine {
         self.logger = logger
     }
     
-    func runGame(player1: PlayerProtocol, player2: PlayerProtocol) {
+    func runGame(player1: PlayerProtocol, player2: PlayerProtocol) -> GameResult? {
         defer { logger.close() }
         
         var board1 = Board()
@@ -25,7 +25,7 @@ struct GameEngine {
             try placeShips(for: player2, on: &board2, isPlayer1: false)
         } catch {
             print("Placement error: \(error)")
-            return
+            return nil
         }
         
         var shots1 = 0
@@ -41,7 +41,7 @@ struct GameEngine {
                     if BoardService.allShipsSunk(on: board2) {
                         logger.logGameOver(result: "win", totalShots: shots1, enemyTotalShots: shots2)
                         logEnemyShips(board2)
-                        return
+                        return GameResult(board1: board1, board2: board2, winner: 1)
                     }
                     current = 2
                 } else {
@@ -55,7 +55,7 @@ struct GameEngine {
                     if BoardService.allShipsSunk(on: board1) {
                         logger.logGameOver(result: "lose", totalShots: shots1, enemyTotalShots: shots2)
                         logEnemyShips(board2)
-                        return
+                        return GameResult(board1: board1, board2: board2, winner: 2)
                     }
                     current = 1
                 } else {

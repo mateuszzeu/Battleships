@@ -49,7 +49,7 @@ struct BoardService {
         board.ships.allSatisfy { $0.hitPositions.count == $0.size }
     }
 
-    private static func getAllPositions(for ship: Ship) -> [Position] {
+    static func getAllPositions(for ship: Ship) -> [Position] {
         (0..<ship.size).map { i in
             ship.direction == .horizontal
                 ? Position(ship.position.x + i, ship.position.y)

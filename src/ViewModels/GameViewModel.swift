@@ -10,22 +10,24 @@ import Foundation
 @Observable
 @MainActor
 final class GameViewModel {
-    var gameStatus: String = "Ready"
+    var gameStatus: String = "Gotowy"
     var logPath: String?
     var isRunning: Bool = false
+    var gameResult: GameResult?
 
     func runGame() async {
         guard !isRunning else { return }
         isRunning = true
-        gameStatus = "Running simulation..."
+        gameStatus = "Symulacja w toku..."
         logPath = nil
+        gameResult = nil
 
         let df = DateFormatter()
         df.dateFormat = "yyyyMMdd-HHmmss"
         let filename = "ships-game-\(df.string(from: Date())).log"
 
         guard let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-            gameStatus = "Error: cannot access Documents"
+            gameStatus = "Błąd: brak dostępu do dokumentów"
             isRunning = false
             return
         }
@@ -34,16 +36,17 @@ final class GameViewModel {
 
         do {
             let path = fileURL.path
-            try await Task.detached {
+            let result = try await Task.detached {
                 let logger = try GameLogger(filePath: path)
                 let engine = GameEngine(logger: logger)
-                engine.runGame(player1: RandomPlayer(), player2: RandomPlayer())
+                return engine.runGame(player1: RandomPlayer(), player2: RandomPlayer())
             }.value
 
             logPath = path
-            gameStatus = "Game Over"
+            gameResult = result
+            gameStatus = result != nil ? "Koniec gry - Gracz \(result!.winner) wygrywa!" : "Koniec gry"
         } catch {
-            gameStatus = "Error: \(error.localizedDescription)"
+            gameStatus = "Błąd: \(error.localizedDescription)"
         }
 
         isRunning = false
