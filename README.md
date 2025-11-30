@@ -11,7 +11,17 @@ This project implements a simple Battleships simulation where two algorithmic pl
 * 📱 Select the **Battleships** scheme and choose a device
 * ▶️ Press **Run (⌘R)**
 * 🕹️ Press **Run Game** inside the app
-* 📄 A log file will be created in the project folder (with a shareable path)
+* 📄 A log file will be created in the app's Documents directory, and its full path will be displayed in the UI.
+
+---
+
+## 📱 UI Preview
+
+<img width="332" height="720" alt="IMG_3818_332x720" src="https://github.com/user-attachments/assets/3eec0570-cd40-4165-a504-8da5ace0953d" />
+<img width="332" height="720" alt="IMG_3819_332x720" src="https://github.com/user-attachments/assets/1fd59c0e-8598-445a-9599-46ade5686d13" />
+|
+<img width="332" height="720" alt="IMG_3820_332x720" src="https://github.com/user-attachments/assets/879ee0cd-3761-4b83-ae79-a16832d8a727" />
+<img width="332" height="720" alt="IMG_3821_332x720" src="https://github.com/user-attachments/assets/b37b1c37-d7dc-4e34-83ce-39741b5d8b30" />
 
 ---
 
