@@ -10,10 +10,6 @@ import Foundation
 struct GameEngine {
     let logger: GameLogger
     
-    init(logger: GameLogger) {
-        self.logger = logger
-    }
-    
     func runGame(player1: PlayerProtocol, player2: PlayerProtocol) -> GameResult? {
         defer { logger.close() }
         

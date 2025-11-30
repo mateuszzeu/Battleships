@@ -5,8 +5,6 @@
 //  Created by MAT on 27/11/2025.
 //
 
-import Foundation
-
 struct Position: Equatable, Hashable {
     let x: Int
     let y: Int

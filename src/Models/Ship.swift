@@ -5,8 +5,6 @@
 //  Created by MAT on 27/11/2025.
 //
 
-import Foundation
-
 struct Ship {
     let size: Int
     let position: Position
